@@ -9,8 +9,9 @@
 | 06.11.2024 | 7 | Portswigger  | Understand portswigger and initiate lab SQL injection|
 | 11.11.2024 | 6 | Portswigger  | Study Netacad and completed SQL injection |
 | 13.11.2024 | 7 | Portswigger and Burpsuite | Netacad study and completed authorization and access lab|
-| 18.11.2024 | 7 |  | Booking system phase 1 initiated with docker, deno, vscode tools|
-| 18.11.2024 | 7 | Portswigger  | Booking system phase 1 in progress with solving errors|
+| 18.11.2024 | 7 | Booking system phase 1 |Initiated with docker, deno, vscode tools|
+| 18.11.2024 | 7 | Booking system phase 1 |In progress and fixing some errors|
+
 
 
 
