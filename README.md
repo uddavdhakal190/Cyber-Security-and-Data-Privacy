@@ -9,7 +9,11 @@
 | 11.11.2024 | 6 | Portswigger  | Study Netacad and completed SQL injection |
 | 13.11.2024 | 7 | Portswigger and Burpsuite | Completed authorization,access lab and module exam|
 | 18.11.2024 | 7 | Booking system phase 1 |Initiated with docker, deno, vscode tools|
-| 20.11.2024 | 7 | Booking system phase 1 |completed phase 1 Link to report 1 |
+| 20.11.2024 | 7 | Booking system phase 1 | link to report 1 https://github.com/uddavdhakal190/Cyber-Security-and-Data-Privacy/blob/main/First_round_Report.md |
+| Used prepared statements with parameter binding to avoid SQL injection |
+| link to report 2                                     |
+
+
 
 
 
