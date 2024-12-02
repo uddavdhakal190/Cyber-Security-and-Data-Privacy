@@ -14,6 +14,12 @@
 | 20.11.2024 | 6 | Booking system phase 1 | link to report 2 https://github.com/uddavdhakal190/Cyber-Security-and-Data-Privacy/blob/main/second_test_report.md |
 | 25.11.2024 | 7 | Booking system phase 2 | Lecture of Authorization attended and project initiated|
 | 26.11.2024 | 6 | Booking system phase 2 | Project under progress |
+| 01.12.2024 | 6 | Booking system phase 2 | link to report 1 https://github.com/uddavdhakal190/Cyber-Security-and-Data-Privacy/blob/main/Index-login-registration-Test1.md|
+| 01.12.2024 |   | Booking system phase 2 | Between the test cycle post login validation error and CSP header alert were fixed by editing some code in the app.js file    |
+| 01.12.2024 | 6 | Booking system phase 2 | link to report 2 https://github.com/uddavdhakal190/Cyber-Security-and-Data-Privacy/blob/main/Final%20Test%20phase2-.md        |
+
+
+
 
 
 
