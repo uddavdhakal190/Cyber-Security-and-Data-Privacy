@@ -19,6 +19,11 @@
 | 01.12.2024 | 6 | Booking system phase 2 | link to report 2 https://github.com/uddavdhakal190/Cyber-Security-and-Data-Privacy/blob/main/Final%20Test%20phase2-.md        |
 | 04.12.2024 | 6 | Booking system phase 3 | link to MD file https://github.com/uddavdhakal190/Cyber-Security-and-Data-Privacy/blob/main/readme.md                         |
 | 04.12.2024 |   | Booking system phase 3 | link to ZAP report   https://github.com/uddavdhakal190/Cyber-Security-and-Data-Privacy/blob/main/2024-12-05-ZAP-Report-.md    |
+| 08.12.2024 | 5  | Portswigger Lab Exercise| 4 more lab exercises completed and study of Booking System Phase 4  |
+| 12.12.2024 | 5  | Booking System Phase 4 | Attended recorded session and completed project |
+| 12.12.2024 | 4 | Final Report | Completed |
+
+
 
 
 
