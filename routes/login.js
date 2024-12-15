@@ -1,6 +1,7 @@
 import client from "../db/db.js";
 import * as bcrypt from "https://deno.land/x/bcrypt/mod.ts"; // For password comparison
 import { z } from "https://deno.land/x/zod@v3.16.1/mod.ts"; // For validation
+import { createSession } from "../sessionService.js"; // For sessions
 
 // Zod schema for login validation
 const loginSchema = z.object({
@@ -18,14 +19,14 @@ async function logLogin(userUUID, ipAddress) {
 
 // Helper function to fetch the user by email
 async function getUserByEmail(email) {
-    const result = await client.queryArray(`SELECT username, password_hash, user_token FROM zephyr_users WHERE username = $1`, [email]);
+    const result = await client.queryArray(`SELECT username, password_hash, user_token, role FROM zephyr_users WHERE username = $1`, [email]);
     return result.rows.length > 0 ? result.rows[0] : null;
 }
 
 // Handle user login
-export async function loginUser(c, info) {
-    const username = c.get('username');
-    const password = c.get('password');
+export async function loginUser(req, info) {
+    const username = req.get('username');
+    const password = req.get('password');
     try {
         // Validate the input data using Zod
         loginSchema.parse({ username });
@@ -36,8 +37,7 @@ export async function loginUser(c, info) {
             return new Response("Invalid email or password", { status: 400 });
         }
 
-        const [storedUsername, storedPasswordHash, userUUID] = user;
-        
+        const [storedUsername, storedPasswordHash, userUUID, role] = user;
 
         // Compare provided password with the stored hashed password
         const passwordMatches = await bcrypt.compare(password, storedPasswordHash);
@@ -45,12 +45,21 @@ export async function loginUser(c, info) {
             return new Response("Invalid email or password", { status: 400 });
         }
 
+        // Create session
+        const sessionId = createSession({ username: storedUsername, role });
+
         // Log successful login
         const ipAddress = info.remoteAddr.hostname;
         await logLogin(userUUID, ipAddress);
 
-        // Authentication successful, redirect to the index page
-        return new Response(null, { status: 302, headers: { Location: "/", }, });
+        // Return a redirect response with the Set-Cookie header
+        return new Response(null, {
+            status: 302,
+            headers: {
+                Location: "/",
+                "Set-Cookie": `session_id=${sessionId}; HttpOnly; Secure; SameSite=Strict; Path=/`,
+            },
+        });
 
 
     } catch (error) {
